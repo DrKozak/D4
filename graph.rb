@@ -1,4 +1,4 @@
-
+# Vertex class
 class Vertex
   attr_accessor :id, :neighbors, :data
 

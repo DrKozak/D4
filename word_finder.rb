@@ -1,6 +1,5 @@
-require_relative 'path.rb'
 require_relative 'graph.rb'
-
+require_relative 'path.rb'
 
 
 
@@ -10,13 +9,14 @@ def incorrect_arguments
 end
 
 
+
 def incorrect_file_type
   puts 'File cannot be located'
   exit 1
 end
 
+# Must have one argument for it to be valid arg
 
-# Must have one argument for it to be valid
 def valid_num_args?(args)
   args.count == 1
 rescue StandardError
@@ -25,6 +25,8 @@ end
 
 
 
+
+
 incorrect_arguments unless valid_num_args?(ARGV)
 incorrect_arguments unless File.file?(ARGV[0])
-get_words(ARGV[0])
+puts get_words(ARGV[0])

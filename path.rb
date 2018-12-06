@@ -74,10 +74,6 @@ def get_words(filename)
   permutations = permutations(paths)
   wordlist = wordlist('wordlist.txt')
   validwords = real_words(permutations, wordlist)
-  puts 'All Strings from wordlist :'
-  print paths
-  puts "\n Valid Strings:"
-  print validwords
   puts "\nLongest valid word(s): from dictionary"
-  return longest_words(validwords, longest_length(validwords))
+  longest_words(validwords, longest_length(validwords))
 end

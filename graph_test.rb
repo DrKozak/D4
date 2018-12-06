@@ -38,7 +38,7 @@ class GraphTest < Minitest::Test
     end_vertices.each { |e| ends << e.id }
     assert_equal(expected.sort, ends.sort)
   end
-  
+
   def test_edges
     @g.add_vertex(1, 'C', [2])
     @g.add_vertex(2, 'A', [5, 6])
@@ -47,7 +47,7 @@ class GraphTest < Minitest::Test
     expected = [[1, 2], [2, 5], [2, 6]]
     assert_equal(expected.sort, @g.edges.sort)
   end
-  
+
   def test_vertex_edges
     @g.add_vertex(1, 'C', [2])
     @g.add_vertex(2, 'A', [5, 6])
